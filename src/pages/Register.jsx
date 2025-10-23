@@ -1,7 +1,28 @@
-import React from "react";
+import React, { use } from "react";
 import { Link } from "react-router";
+import { AuthContext } from "../provider/AuthProvider";
 
 const Register = () => {
+  const { createUser, setUser } = use(AuthContext);
+  const handleRegister = (e) => {
+    e.preventDefault();
+    // console.log(e.target);
+    const name = e.target.name.value;
+    const photo = e.target.photo.value;
+    const email = e.target.email.value;
+    const password = e.target.password.value;
+    console.log({ name, photo, email, password });
+    createUser(email, password)
+      .then((res) => {
+        const user = res.user;
+        setUser(user);
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        alert(errorCode, errorMessage);
+      });
+  };
   return (
     <div>
       <div className="flex justify-center items-center min-h-screen">
@@ -9,22 +30,48 @@ const Register = () => {
           <h2 className="font-semibold text-2xl text-center pt-5">
             Register your account
           </h2>
-          <div className="card-body">
+          <form onSubmit={handleRegister} className="card-body">
             <fieldset className="fieldset">
               {/* name */}
               <label className="label">Name</label>
-              <input type="text" className="input" placeholder="Name" />
+              <input
+                type="text"
+                className="input"
+                placeholder="Name"
+                name="name"
+                required
+              />
               {/* photo URL */}
               <label className="label">Photo URL</label>
-              <input type="text" className="input" placeholder="Photo URL" />
+              <input
+                type="text"
+                className="input"
+                placeholder="Photo URL"
+                name="photo"
+                required
+              />
               {/* email */}
               <label className="label">Email</label>
-              <input type="email" className="input" placeholder="Email" />
+              <input
+                type="email"
+                className="input"
+                placeholder="Email"
+                name="email"
+                required
+              />
               {/* password */}
               <label className="label">Password</label>
-              <input type="password" className="input" placeholder="Password" />
+              <input
+                type="password"
+                className="input"
+                placeholder="Password"
+                name="password"
+                required
+              />
 
-              <button className="btn btn-neutral mt-4">Register</button>
+              <button type="submit" className="btn btn-neutral mt-4">
+                Register
+              </button>
               <p className="font-semibold text-center p-4">
                 Already have an account ?{" "}
                 <Link to="/auth/login" className="text-secondary">
@@ -32,7 +79,7 @@ const Register = () => {
                 </Link>
               </p>
             </fieldset>
-          </div>
+          </form>
         </div>
       </div>
     </div>
