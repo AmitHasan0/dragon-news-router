@@ -1,21 +1,40 @@
-import React, { use } from "react";
-import { Link } from "react-router";
+import React, { use, useState } from "react";
+import { Link, useNavigate } from "react-router";
 import { AuthContext } from "../provider/AuthProvider";
 
 const Register = () => {
-  const { createUser, setUser } = use(AuthContext);
+  const { createUser, setUser, upadateUser } = use(AuthContext);
+  const [nameError, setNameError] = useState("");
+  const navigate = useNavigate();
   const handleRegister = (e) => {
     e.preventDefault();
     // console.log(e.target);
     const name = e.target.name.value;
+    if (name.length < 5) {
+      setNameError("name should be more than 5 characters");
+      return;
+    } else {
+      setNameError("");
+    }
     const photo = e.target.photo.value;
     const email = e.target.email.value;
     const password = e.target.password.value;
-    console.log({ name, photo, email, password });
+    // console.log({ name, photo, email, password });
     createUser(email, password)
       .then((res) => {
         const user = res.user;
-        setUser(user);
+        upadateUser({
+          displayName: name,
+          photoURL: photo,
+        })
+          .then(() => {
+            setUser({ ...user, displayName: name, photoURL: photo });
+          })
+          .catch((error) => {
+            console.log(error);
+            setUser(user);
+            navigate("/");
+          });
       })
       .catch((error) => {
         const errorCode = error.code;
@@ -41,6 +60,7 @@ const Register = () => {
                 name="name"
                 required
               />
+              {nameError && <p className="text-red-500 text-xs">{nameError}</p>}
               {/* photo URL */}
               <label className="label">Photo URL</label>
               <input
