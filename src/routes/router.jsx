@@ -13,6 +13,8 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <HomeLayout></HomeLayout>,
+    loader: () => fetch("/liveNews.json"),
+    hydrateFallbackElement: <Loading></Loading>,
     children: [
       {
         path: "",

@@ -1,0 +1,56 @@
+{
+  "status": "ok",
+  "totalResults": 5,
+  "articles": [
+    {
+      "source": { "id": "onbd", "name": "On BD News" },
+      "author": "সুমন রায়",
+      "title": "বাংলাদেশে অক্টোবর মাসে ডেঙ্গু মৃত্যুর সংখ্যা রেকর্ড ছুঁল",
+      "description": "স্বাস্থ্য অধিদপ্তর জানিয়েছে, গত অক্টোবর মাসে দেশে ডেঙ্গুতে মৃত্যুর রেকর্ড তৈরি হয়েছে।",
+      "url": "https://example.com/news/dengue-october-bd",
+      "urlToImage": "https://example.com/images/dengue-record.jpg",
+      "publishedAt": "2025-11-01T08:45:00Z",
+      "content": "উল্লেখযোগ্য পরিমাণ রোগি হাসপাতালে ভর্তি হয়েছেন…"
+    },
+    {
+      "source": { "id": "onbd", "name": "On BD News" },
+      "author": "রাবেয়া খান",
+      "title": "নির্বাচন কমিশনের চেয়ারম্যান আগামীসপ্তাহ দায়িত্ব নেবেন: ইসি আনোয়ার",
+      "description": "নতুন নির্বাচনি সূচি ঘোষণা করতে যাচ্ছেন কমিশন চেয়ারম্যান: জানিয়েছেন ইসি আনোয়ারুল হক কন্দকার।",
+      "url": "https://example.com/news/election-commission-chairman",
+      "urlToImage": "https://example.com/images/ec-chair.jpg",
+      "publishedAt": "2025-11-01T07:30:00Z",
+      "content": "সরকারের সঙ্গে সমন্বয়ে নির্বাচন কমিশন আগামী নির্বাচনের প্রস্তুতি শুরু করেছে…"
+    },
+    {
+      "source": { "id": "onbd", "name": "On BD News" },
+      "author": "তানভীর ইসলাম",
+      "title": "ঢাকা–মাওয়া এক্সপ্রেসওয়েতে দুর্ঘটনায় এক যাত্রী নিহত",
+      "description": "ঢাকা থেকে মাওয়া অভিমুখী এক্সপ্রেসওয়েতে সড়ক দুর্ঘটনায় এক যাত্রী প্রাণ হারিয়েছেন।",
+      "url": "https://example.com/news/mawa-road-crash",
+      "urlToImage": "https://example.com/images/mawa-crash.jpg",
+      "publishedAt": "2025-11-01T06:15:00Z",
+      "content": "প্রাইভেটকার ও বাসের সংঘর্ষে আহত হয়েছেন আরও কয়েক যাত্রী…"
+    },
+    {
+      "source": { "id": "onbd", "name": "On BD News" },
+      "author": "লাইলা পারভিন",
+      "title": "দেশে রেমিট্যান্স প্রবাহ ২.৪৩ বিলিয়ন ডলারে পৌঁছেছে অক্টোবরের ২৯ দিনের মধ্যে",
+      "description": "বাংলাদেশে গত ২৯ দিনে রেমিট্যান্স এসেছে ২.৪৩ বিলিয়ন ডলারে—এটি অর্থনীতিতে নতুন মানদণ্ড স্থাপন করছে।",
+      "url": "https://example.com/news/remittance-oct-bd",
+      "urlToImage": "https://example.com/images/remittance-flow.jpg",
+      "publishedAt": "2025-11-01T05:00:00Z",
+      "content": "ব্যাংক ও রিজার্ভ ব্যাঙ্কের হিসাব অনুযায়ী রেমিট্যান্স গত বছরের তুলনায় বৃদ্ধি পেয়েছে…"
+    },
+    {
+      "source": { "id": "onbd", "name": "On BD News" },
+      "author": "সোহেল রানা",
+      "title": "পার্বত্য এলাকায় জাটকা আহরণের ওপর সারাদেশে নিষেধাজ্ঞা শুরু",
+      "description": "জাটকা আহরণের ওপর সারাদেশে আজ থেকে নিষেধাজ্ঞা দিয়েছে মৎস্য ও প্রাণিসম্পদ মন্ত্রণালয়।",
+      "url": "https://example.com/news/jatka-ban-bd",
+      "urlToImage": "https://example.com/images/jatka-ban.jpg",
+      "publishedAt": "2025-11-01T04:00:00Z",
+      "content": "নিষেধাজ্ঞার ফলে জাটকা আহরণ কমাতে মৎস্য বিভাগ ওব সার্চ টিম তৈরি করেছে…"
+    }
+  ]
+}
